@@ -1,6 +1,8 @@
 # [:bowl_with_spoon:	bulgogi](https://github.com/cris691/bulgogi)
 
-Non-framework render function. Proof of concept.
+#### **[550MB/s - 800MB/s SMHasher](https://github.com/rurban/smhasher/blob/master/doc/beamsplitter.txt)** [![version](https://img.shields.io/npm/v/beamsplitter.svg?label=&color=0080FF)](https://github.com/cris691/beamsplitter/releases/latest) ![npm downloads](https://img.shields.io/npm/dt/beamsplitter)
+
+**bulgogi** is on-framework render function proof of concept.
 
 ## Features
 
@@ -142,4 +144,4 @@ self.runFormTest = runFormTest;
   
 --------
 
-# *Bulgogi!*
+# *bulgogi!*
