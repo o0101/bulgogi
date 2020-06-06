@@ -1,6 +1,29 @@
-# bulgogi
+# [:bowl_with_spoon:	bulgogi](https://github.com/cris691/bulgogi)
 
-Non-framework render function
+Non-framework render function. Proof of concept.
+
+## Features
+
+- minimal footprint
+- nest views
+- immediate mode GUI
+- imperfectly save and restore focus
+
+## Features (of ommission)
+
+- JSX
+- state management
+- lifecycle hooks
+- props
+- cute declarative/imperative attribute syntax (*I'm lookin' at you, Vue*)
+- pages of README about how absolutely f##cking brilliant this amazing new framework is
+- sexyness and trendiness
+
+## Get it
+
+```console
+npm i --save bulgogi
+```
 
 ## In its entirety
 
@@ -117,4 +140,6 @@ self.runFormTest = runFormTest;
     - `<docprop>`: the property named by `docprop` of any document ancestor
   - details about which elements are reflected to the document or window, [here](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Event_handlers) and [here](https://html.spec.whatwg.org/multipage/webappapis.html#event-handlers-on-elements,-document-objects,-and-window-objects)
   
+--------
 
+# *Bulgogi!*
