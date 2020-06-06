@@ -1,6 +1,6 @@
 # [:bowl_with_spoon:	bulgogi](https://github.com/cris691/bulgogi)
 
-#### [![version](https://img.shields.io/npm/v/beamsplitter.svg?label=&color=0080FF)](https://github.com/cris691/beamsplitter/releases/latest) ![npm downloads](https://img.shields.io/npm/dt/beamsplitter)
+#### [![version](https://img.shields.io/npm/v/bulgogi.svg?label=&color=0080FF)](https://github.com/cris691/bulgogi/releases/latest) ![npm downloads](https://img.shields.io/npm/dt/bulgogi)
 
 **bulgogi** is on-framework render function proof of concept.
 
