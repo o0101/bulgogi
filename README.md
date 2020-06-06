@@ -2,7 +2,7 @@
 
 #### [![version](https://img.shields.io/npm/v/bulgogi.svg?label=&color=0080FF)](https://github.com/cris691/bulgogi/releases/latest) ![npm downloads](https://img.shields.io/npm/dt/bulgogi)
 
-**bulgogi** is an no-framework render function proof of concept.
+**bulgogi** is a no-framework render function proof of concept.
 
 ## Features
 
