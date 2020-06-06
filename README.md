@@ -21,6 +21,9 @@
 - pages of README about how absolutely f##cking brilliant this amazing new framework is
 - sexyness and trendiness
 
+## Contribute
+
+
 ## Get it
 
 ```console
@@ -143,5 +146,8 @@ self.runFormTest = runFormTest;
   - details about which elements are reflected to the document or window, [here](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Event_handlers) and [here](https://html.spec.whatwg.org/multipage/webappapis.html#event-handlers-on-elements,-document-objects,-and-window-objects)
   
 --------
+
+![bulgogi really wants you, it even grew a moustache for you](https://user-images.githubusercontent.com/22254235/83939389-2d86b480-a80f-11ea-87a0-b49c154f6d1f.jpg)
+
 
 # *bulgogi!*
