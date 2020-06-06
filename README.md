@@ -23,8 +23,21 @@
 
 ## Contribute
 
+Yes, please contribute. But not to "add new awesome feature X", and stretch and extend the poor code until it's all bent out of shape and has a breakdown trying to people please everybody all the time.
 
-## Get it
+Instead, submit thoughtful issues and PRs that aim to improve the code quality, simplicity, portability, developer experience, performance, and so on. Funnily enough, there's a lot of work there that can make a big impact. :smiley:
+
+When evaluating issues/features/fixes, consider the following in order of importance:
+
+Does my issue/PR increase:
+
+- code quality
+- simplicity
+- portability
+- dev experience
+- performance
+
+## Get it? Just kidding. "How to" get it.
 
 ```console
 npm i --save bulgogi
