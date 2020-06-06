@@ -2,7 +2,7 @@
   "name": "bulgogi",
   "version": "1.0.0",
   "description": "non-framework render functions",
-  "main": "src/dist/main.js",
+  "main": "src/b.js",
   "scripts": {
     "test": "serve -p 8080"
   },
