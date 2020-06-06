@@ -46,102 +46,101 @@ npm i --save bulgogi
 ## In its entirety
 
 ```javascript
-const parser = new DOMParser();
+  const parser = new DOMParser();
 
-const consistentFocus = imperfectlySaveAndRestoreFocus();
+  const consistentFocus = imperfectlySaveAndRestoreFocus();
 
-function toDOM(markup) {
-  return parser.parseFromString(markup, 'text/html');
-}
-
-export function update(view, state) {
-  consistentFocus.next();
-  
-  const docEl = toDOM(view(state)).documentElement;
-  document.documentElement.replaceWith(docEl);
-
-  consistentFocus.next();
-}
-
-function *imperfectlySaveAndRestoreFocus() {
-  while(true) {
-    const active = document.activeElement;
-    let selectionStart,selectionEnd;
-    if ( active ) {
-      ({selectionStart,selectionEnd} = active);
-    }
-
-    yield;
-
-    if ( active ) {
-      const newActive = document.querySelector(imperfectlyGetSelector(active));
-      if ( newActive ) {
-        newActive.focus();
-        try {
-          Object.assign(newActive,{selectionStart,selectionEnd});
-        } catch(e) {}
-      }
-    }
-
-    yield;
+  function toDOM(markup) {
+    return parser.parseFromString(markup, 'text/html');
   }
-}
 
-function imperfectlyGetSelector(el) {
-  // the first html to our selector does not help specificity
-  return `${
-    el.parentElement && el.parentElement.localName != 'html' ? `${imperfectlyGetSelector(el.parentElement)} > ` : ''  
-  }${
-    el.localName
-  }${
-    el.id ? `#${el.id.replace(/\./g, '\\\\.')}` : ''
-  }${
-    el.classList.length ? `.${[...el.classList].join('.')}` : ''
-  }${
-    el.name ? `[name="${el.name}"]` : ''
-  }`;
-}
+  export function update(view, state) {
+    consistentFocus.next();
+    
+    const docEl = toDOM(view(state)).documentElement;
+    document.documentElement.replaceWith(docEl);
+
+    consistentFocus.next();
+  }
+
+  function *imperfectlySaveAndRestoreFocus() {
+    while(true) {
+      const active = document.activeElement;
+      let selectionStart,selectionEnd;
+      if ( active ) {
+        ({selectionStart,selectionEnd} = active);
+      }
+
+      yield;
+
+      if ( active ) {
+        const newActive = document.querySelector(imperfectlyGetSelector(active));
+        if ( newActive ) {
+          newActive.focus();
+          try {
+            Object.assign(newActive,{selectionStart,selectionEnd});
+          } catch(e) {}
+        }
+      }
+
+      yield;
+    }
+  }
+
+  function imperfectlyGetSelector(el) {
+    // the first html to our selector does not help specificity
+    return `${
+      el.parentElement && el.parentElement.localName != 'html' ? `${imperfectlyGetSelector(el.parentElement)} > ` : ''  
+    }${
+      el.localName
+    }${
+      el.id ? `#${el.id.replace(/\./g, '\\\\.')}` : ''
+    }${
+      el.classList.length ? `.${[...el.classList].join('.')}` : ''
+    }${
+      el.name ? `[name="${el.name}"]` : ''
+    }`;
+  }
 ```
-
 
 ## Docs `update(view, state)` via example
 
 ```javascript
-import {update} from './b.js';
+  import {update} from './b.js';
 
-let counter = 0;
+  let counter = 0;
 
-runTest();
-setInterval(runTest, 2000);
+  runTest();
+  setInterval(runTest, 2000);
 
-function runTest() {
-  update(Test, {counter:counter++});
-}
+  function runTest() {
+    update(Test, {counter:counter++});
+  }
 
-function Test(state) {
-  return `
-    <article class=excellent>
-      <h1>An Article Title</h1>
-      ${Test2(state)}
-    </article>
-  `
-}
+  function Test(state) {
+    return `
+      <article class=excellent>
+        <h1>An Article Title</h1>
+        ${Test2(state)}
+      </article>
+    `
+  }
 
-function Test2({counter}) {
-  return `
-    <form method=GET action=/hello>
-      <input type=number name=xchakka value=${counter}>
-      <input type=text name=bigloo value=${counter}>
-      <button onclick=runFormTest(this,event,onclick,name,xchakka);>Do it</button>
-    </form>
-  `;
-}
+  function Test2({counter}) {
+    return `
+      <form method=GET action=/hello>
+        <input type=number name=xchakka value=${counter}>
+        <input type=text name=bigloo value=${counter}>
+        <button onclick=runFormTest(this,event,onclick,name,xchakka);>Do it</button>
+      </form>
+    `;
+  }
 
-function runFormTest(...a) { 
-  return (console.log(...a), a[1].preventDefault(), false) 
-}; 
+  function runFormTest(...a) { 
+    return (console.log(...a), a[1].preventDefault(), false) 
+  }; 
 
-self.runFormTest = runFormTest;
+  self.runFormTest = runFormTest;
 ```
 
 ## Benefits
