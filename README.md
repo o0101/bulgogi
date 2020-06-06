@@ -90,7 +90,8 @@ npm i --save bulgogi
   function imperfectlyGetSelector(el) {
     // the first html to our selector does not help specificity
     return `${
-      el.parentElement && el.parentElement.localName != 'html' ? `${imperfectlyGetSelector(el.parentElement)} > ` : ''  
+      el.parentElement && el.parentElement.localName != 'html' ? 
+        `${imperfectlyGetSelector(el.parentElement)} > ` : ''  
     }${
       el.localName
     }${
