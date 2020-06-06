@@ -51,9 +51,9 @@ self.runFormTest = runFormTest;
   - benefits include useful variables available in scope of the attribute value like:
     - event: the Event that fired
     - this: the event target the handler is attached to
-    - <elprop>: the property named by `elprop` of the element its attached to, overrides
-    - <name>: the form control named by `name` of any `form` ancestor, overrides
-    - <docprop>: the property named by `docprop` of any document ancestor
+    - `<elprop>`: the property named by `elprop` of the element its attached to, overrides
+    - `<name>`: the form control named by `name` of any `form` ancestor, overrides
+    - `<docprop>`: the property named by `docprop` of any document ancestor
   - details about which elements are reflected to the document or window, [here](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Event_handlers) and [here](https://html.spec.whatwg.org/multipage/webappapis.html#event-handlers-on-elements,-document-objects,-and-window-objects)
   
 
