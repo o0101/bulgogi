@@ -9,12 +9,12 @@ function toDOM(markup) {
 export function update(view, state, {useBody: useBody = false} = {}) {
   consistentFocus.next();
   
-  const docEl = toDOM(view(state)).documentElement;
+  const doc = toDOM(view(state));
 
   if ( useBody ) {
-    document.body.replaceWith(docEl.body);
+    document.body.replaceWith(doc.body);
   } else {
-    document.documentElement.replaceWith(docEl);
+    document.documentElement.replaceWith(doc.documentElement);
   }
 
   consistentFocus.next();
