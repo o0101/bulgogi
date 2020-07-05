@@ -12,7 +12,7 @@ export function update(view, state, {useBody: useBody = false} = {}) {
   const docEl = toDOM(view(state)).documentElement;
 
   if ( useBody ) {
-    document.documentElement.body.replaceWith(docEl.body);
+    document.body.replaceWith(docEl.body);
   } else {
     document.documentElement.replaceWith(docEl);
   }
