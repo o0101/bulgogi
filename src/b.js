@@ -6,11 +6,16 @@ function toDOM(markup) {
   return parser.parseFromString(markup, 'text/html');
 }
 
-export function update(view, state) {
+export function update(view, state, {useBody: useBody = false} = {}) {
   consistentFocus.next();
   
   const docEl = toDOM(view(state)).documentElement;
-  document.documentElement.replaceWith(docEl);
+
+  if ( useBody ) {
+    document.documentElement.body.replaceWith(docEl.body);
+  } else {
+    document.documentElement.replaceWith(docEl);
+  }
 
   consistentFocus.next();
 }
