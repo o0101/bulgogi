@@ -2,7 +2,7 @@ const parser = new DOMParser();
 
 const consistentFocus = imperfectlySaveAndRestoreFocus();
 
-function toDOM(markup) {
+export function toDOM(markup) {
   return parser.parseFromString(markup, 'text/html');
 }
 
