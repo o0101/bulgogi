@@ -1,6 +1,6 @@
 {
   "name": "bulgogi",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "non-framework render functions",
   "main": "src/b.js",
   "scripts": {
