@@ -9,7 +9,7 @@ function runTest() {
   update(Test, {counter:counter++});
 }
 
-function Test(state) {
+async function Test(state) {
   return `
     <article class=excellent>
       <h1>An Article Title</h1>
