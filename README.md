@@ -10,6 +10,7 @@
 - nest views
 - immediate mode GUI
 - imperfectly save and restore focus
+- supports async view functions
 
 ## Features (of ommission)
 
