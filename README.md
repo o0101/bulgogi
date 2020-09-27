@@ -4,6 +4,10 @@
 
 **bulgogi** is the JS [imgui](https://en.wikipedia.org/wiki/Immediate_mode_GUI) PoC.
 
+## Example Code
+
+https://github.com/cris691/win66/blob/master/public/app.js
+
 ## Features
 
 - minimal footprint
