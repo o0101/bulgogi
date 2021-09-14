@@ -1,8 +1,12 @@
-# [:bowl_with_spoon:	bulgogi](https://github.com/cris691/bulgogi)
+# [:bowl_with_spoon:	bulgogi](https://github.com/cris691/bulgogi) ![npm](https://img.shields.io/npm/dt/bulgogi)
 
 #### [![version](https://img.shields.io/npm/v/bulgogi.svg?label=&color=0080FF)](https://github.com/cris691/bulgogi/releases/latest) ![npm downloads](https://img.shields.io/npm/dt/bulgogi)
 
 **bulgogi** is the JS [imgui](https://en.wikipedia.org/wiki/Immediate_mode_GUI) PoC.
+
+```console
+$ npm i --save bulgogi
+```
 
 ## Example Code
 
